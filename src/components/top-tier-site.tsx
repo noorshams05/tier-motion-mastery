@@ -34,21 +34,14 @@ import { useServerFn } from "@tanstack/react-start";
 import { toast } from "sonner";
 import { z } from "zod";
 import { submitLead } from "@/lib/leads.functions";
-// Base paths pointing to your public folder assets
-const logoUrl = "/photos/top tier logo.png";
-const truckBrandedUrl = "/photos/moving truck.jpg";
+import { cn } from "@/lib/utils";
 
-// Step 1 to 4 Images
-// Step 1 to 4 Images (Supporting both array map indexes and text key lookups)
-export const photos = [
-  { src: "/photos/ee83274c-1dba-4189-b716-0fb5e5b95727.jpg", url: "/photos/ee83274c-1dba-4189-b716-0fb5e5b95727.jpg" },
-  { src: "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg", url: "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg" },
-  { src: "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg", url: "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg" },
-  { src: "/photos/2cda5e06-e8e9-4a85-823f-553db1f05d7a.jpg", url: "/photos/2cda5e06-e8e9-4a85-823f-553db1f05d7a.jpg" }
-];
+// Core site layout path references
+export const logoUrl = "/photos/top tier logo.png";
+export const truckBrandedUrl = "/photos/moving truck.jpg";
 
-// Add legacy keys onto the photos array so text lookup selectors do not fail
-Object.assign(photos, {
+// Step 1 to 4 Images (Object Mapping configuration)
+export const photos = {
   "01": "/photos/ee83274c-1dba-4189-b716-0fb5e5b95727.jpg",
   "02": "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg",
   "03": "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg",
@@ -57,9 +50,9 @@ Object.assign(photos, {
   "pack": "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg",
   "move": "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg",
   "settleIn": "/photos/2cda5e06-e8e9-4a85-823f-553db1f05d7a.jpg"
-});
+};
 
-// Gallery Image Array tracking every key requirement to clear the broken graphics
+// Gallery Images Array with structural fallback properties
 export const galleryPhotos = [
   { id: "1", src: "/photos/3ba58102-9be3-4553-bcce-eb465bd646c0.jpg", url: "/photos/3ba58102-9be3-4553-bcce-eb465bd646c0.jpg", alt: "Top Tier Moving job site" },
   { id: "2", src: "/photos/21c8ccfe-5800-4b3c-8f6c-ff750b6bff17.jpg", url: "/photos/21c8ccfe-5800-4b3c-8f6c-ff750b6bff17.jpg", alt: "Top Tier Moving job site" },
@@ -68,7 +61,6 @@ export const galleryPhotos = [
   { id: "5", src: "/photos/a6bacc9c-eb42-4f9d-9e80-d0ba121b9b36.jpg", url: "/photos/a6bacc9c-eb42-4f9d-9e80-d0ba121b9b36.jpg", alt: "Top Tier Moving job site" },
   { id: "6", src: "/photos/ece4bb8d-7e17-4840-a430-3187e95d900f.jpg", url: "/photos/ece4bb8d-7e17-4840-a430-3187e95d900f.jpg", alt: "Top Tier Moving job site" }
 ];
-
 /* ---------- Nav ---------- */
 
 const NAV = [
@@ -831,19 +823,27 @@ function Gallery() {
         </Reveal>
 
         <div className="columns-2 md:columns-3 gap-4 md:gap-5 space-y-4 md:space-y-5">
-          {galleryPhotos.map((src, i) => (
-            <Reveal key={src} delay={(i % 6) * 0.05} y={40}>
-              <motion.figure
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="break-inside-avoid overflow-hidden rounded-2xl border border-border/60 bg-surface"
-              >
-                <img
-                  src={src}
-                  alt="Top Tier Moving job site"
-                  loading="lazy"
-                  className="w-full h-auto object-cover transition-transform duration-[900ms] hover:scale-105"
-                />
+          {galleryPhotos.map((photo, i) => {
+            // Force extract the source link string regardless of what data structure got passed
+            const imageSrc = typeof photo === 'string' ? photo : (photo?.src || photo?.url || "");
+            return (
+              <Reveal key={i} delay={((i % 6) * 0.05)} y={40}>
+                <motion.figure
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                  className="break-inside-avoid overflow-hidden rounded-2xl border border-border/60 bg-surface"
+                >
+                  <img
+                    src={imageSrc}
+                    alt="Top Tier Moving job site"
+                    loading="lazy"
+                    className="w-full h-auto object-cover transition-transform duration-[900ms] hover:scale-105"
+                  />
+                </motion.figure>
+              </Reveal>
+            );
+          })}
+
               </motion.figure>
             </Reveal>
           ))}
