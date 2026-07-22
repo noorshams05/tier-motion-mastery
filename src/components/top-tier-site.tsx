@@ -36,6 +36,26 @@ import { z } from "zod";
 import { submitLead } from "@/lib/leads.functions";
 import { photos, galleryPhotos, logoUrl, truckBrandedUrl } from "@/lib/site-assets";
 import { cn } from "@/lib/utils";
+// Override paths to use the public/photos folder directly
+const logoUrl = "/photos/top tier logo.png";
+const truckBrandedUrl = "/photos/moving truck.jpg";
+
+const photos = [
+  "/photos/ee83274c-1dba-4189-b716-0fb5e5b95727.jpg", // 01 Book
+  "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg", // 02 Pack
+  "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg", // 03 Move
+  "/photos/2cda5e06-e8e9-4a85-823f-553db1f05d7a.jpg"  // 04 Settle In
+];
+
+const galleryPhotos = [
+  "/photos/3ba58102-9be3-4553-bcce-eb465bd646c0.jpg",
+  "/photos/21c8ccfe-5800-4b3c-8f6c-ff750b6bff17.jpg",
+  "/photos/65bac265-a5fc-4fa4-8729-996c7d0995f1.jpg",
+  "/photos/60406409-6a7c-4ddf-9d13-ffc41adaa688.jpg",
+  "/photos/a6bacc9c-eb42-4f9d-9e80-d0ba121b9b36.jpg",
+  "/photos/ece4bb8d-7e17-4840-a430-3187e95d900f.jpg"
+];
+
 
 /* ---------- Nav ---------- */
 
