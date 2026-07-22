@@ -39,24 +39,35 @@ const logoUrl = "/photos/top tier logo.png";
 const truckBrandedUrl = "/photos/moving truck.jpg";
 
 // Step 1 to 4 Images
+// Step 1 to 4 Images (Supporting both array map indexes and text key lookups)
 export const photos = [
-  "/photos/ee83274c-1dba-4189-b716-0fb5e5b95727.jpg",
-  "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg",
-  "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg",
-  "/photos/2cda5e06-e8e9-4a85-823f-553db1f05d7a.jpg"
+  { src: "/photos/ee83274c-1dba-4189-b716-0fb5e5b95727.jpg", url: "/photos/ee83274c-1dba-4189-b716-0fb5e5b95727.jpg" },
+  { src: "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg", url: "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg" },
+  { src: "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg", url: "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg" },
+  { src: "/photos/2cda5e06-e8e9-4a85-823f-553db1f05d7a.jpg", url: "/photos/2cda5e06-e8e9-4a85-823f-553db1f05d7a.jpg" }
 ];
 
-// Gallery Images Array with full support for dual string/object configurations
+// Add legacy keys onto the photos array so text lookup selectors do not fail
+Object.assign(photos, {
+  "01": "/photos/ee83274c-1dba-4189-b716-0fb5e5b95727.jpg",
+  "02": "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg",
+  "03": "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg",
+  "04": "/photos/2cda5e06-e8e9-4a85-823f-553db1f05d7a.jpg",
+  "book": "/photos/ee83274c-1dba-4189-b716-0fb5e5b95727.jpg",
+  "pack": "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg",
+  "move": "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg",
+  "settleIn": "/photos/2cda5e06-e8e9-4a85-823f-553db1f05d7a.jpg"
+});
+
+// Gallery Image Array tracking every key requirement to clear the broken graphics
 export const galleryPhotos = [
-  { src: "/photos/3ba58102-9be3-4553-bcce-eb465bd646c0.jpg", url: "/photos/3ba58102-9be3-4553-bcce-eb465bd646c0.jpg", alt: "Top Tier Moving job site" },
-  { src: "/photos/21c8ccfe-5800-4b3c-8f6c-ff750b6bff17.jpg", url: "/photos/21c8ccfe-5800-4b3c-8f6c-ff750b6bff17.jpg", alt: "Top Tier Moving job site" },
-  { src: "/photos/65bac265-a5fc-4fa4-8729-996c7d0995f1.jpg", url: "/photos/65bac265-a5fc-4fa4-8729-996c7d0995f1.jpg", alt: "Top Tier Moving job site" },
-  { src: "/photos/60406409-6a7c-4ddf-9d13-ffc41adaa688.jpg", url: "/photos/60406409-6a7c-4ddf-9d13-ffc41adaa688.jpg", alt: "Top Tier Moving job site" },
-  { src: "/photos/a6bacc9c-eb42-4f9d-9e80-d0ba121b9b36.jpg", url: "/photos/a6bacc9c-eb42-4f9d-9e80-d0ba121b9b36.jpg", alt: "Top Tier Moving job site" },
-  { src: "/photos/ece4bb8d-7e17-4840-a430-3187e95d900f.jpg", url: "/photos/ece4bb8d-7e17-4840-a430-3187e95d900f.jpg", alt: "Top Tier Moving job site" }
+  { id: "1", src: "/photos/3ba58102-9be3-4553-bcce-eb465bd646c0.jpg", url: "/photos/3ba58102-9be3-4553-bcce-eb465bd646c0.jpg", alt: "Top Tier Moving job site" },
+  { id: "2", src: "/photos/21c8ccfe-5800-4b3c-8f6c-ff750b6bff17.jpg", url: "/photos/21c8ccfe-5800-4b3c-8f6c-ff750b6bff17.jpg", alt: "Top Tier Moving job site" },
+  { id: "3", src: "/photos/65bac265-a5fc-4fa4-8729-996c7d0995f1.jpg", url: "/photos/65bac265-a5fc-4fa4-8729-996c7d0995f1.jpg", alt: "Top Tier Moving job site" },
+  { id: "4", src: "/photos/60406409-6a7c-4ddf-9d13-ffc41adaa688.jpg", url: "/photos/60406409-6a7c-4ddf-9d13-ffc41adaa688.jpg", alt: "Top Tier Moving job site" },
+  { id: "5", src: "/photos/a6bacc9c-eb42-4f9d-9e80-d0ba121b9b36.jpg", url: "/photos/a6bacc9c-eb42-4f9d-9e80-d0ba121b9b36.jpg", alt: "Top Tier Moving job site" },
+  { id: "6", src: "/photos/ece4bb8d-7e17-4840-a430-3187e95d900f.jpg", url: "/photos/ece4bb8d-7e17-4840-a430-3187e95d900f.jpg", alt: "Top Tier Moving job site" }
 ];
-
-
 
 /* ---------- Nav ---------- */
 
