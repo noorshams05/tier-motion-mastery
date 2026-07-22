@@ -627,26 +627,26 @@ const STEPS = [
   {
     n: "01",
     title: "Book",
-    body: "Tell us the date, the size, and where it's going. You'll get a straight, honest quote — no fine print, no surprise fees.",
-    image: photos.equipment,
+    body: "Tell us the date, the size, and where it's going. You'll get a straight, honest quote - no fine print, no surprise fees.",
+    image: "/photos/ee83274c-1dba-4189-b716-0fb5e5b95727.jpg",
   },
   {
     n: "02",
     title: "Pack",
     body: "We show up with materials, boxes, and blankets. Every fragile item wrapped, every drawer secured, every corner protected.",
-    image: photos.packing,
+    image: "/photos/f9bed242-65e8-4fe0-b5c5-b5eaa88f71f5.jpg",
   },
   {
     n: "03",
     title: "Move",
-    body: "Trained crew, 2+ years of experience per mover. Fully loaded and on the road — you get updates every step.",
-    image: photos.fullTruck,
+    body: "Trained crew, 2+ years of experience per mover. Fully loaded and on the road - you get updates every step.",
+    image: "/photos/8f7806a1-f603-4d42-8d01-b8e33864d916.jpg",
   },
   {
     n: "04",
     title: "Settle In",
-    body: "Everything placed where it goes, boxes unpacked if you want, furniture reassembled. We leave you home — not with a project.",
-    image: photos.interior,
+    body: "Everything placed where it goes, boxes unpacked if you want, furniture reassembled. We leave you home - not with a project.",
+    image: "/photos/2cda5e06-e8e9-4a85-823f-553db1f05d7a.jpg",
   },
 ];
 
