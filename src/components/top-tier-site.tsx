@@ -37,8 +37,8 @@ import { submitLead } from "@/lib/leads.functions";
 import { cn } from "@/lib/utils";
 
 // Core site layout path references
-export const logoUrl = "/photos/top tier logo.png";
-export const truckBrandedUrl = "/photos/moving truck.jpg";
+export const logoUrl = "/photos/top-tier-logo.png";
+export const truckBrandedUrl = "/photos/moving-truck.jpg";
 
 // Step 1 to 4 Images (Object Mapping configuration)
 export const photos = {
@@ -97,7 +97,7 @@ function Nav() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-16 md:h-20">
         <a href="#top" className="flex items-center gap-3 group">
           <img
-src="/photos/top tier logo.png"
+src="/photos/top-tier-logo.png"
             alt="Top Tier Moving Solutions"
             className="h-10 md:h-12 w-auto transition-transform duration-500 group-hover:scale-105"
           />
@@ -301,7 +301,7 @@ function Hero() {
       {/* Parallax bg */}
       <motion.div style={{ y: bgY }} className="absolute inset-0">
         <img
-          src={photos.fullTruck}
+         src={truckBrandedUrl}
           alt=""
           className="h-full w-full object-cover opacity-30"
         />
