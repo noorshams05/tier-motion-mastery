@@ -843,10 +843,6 @@ function Gallery() {
               </Reveal>
             );
           })}
-
-              </motion.figure>
-            </Reveal>
-          ))}
         </div>
       </div>
     </section>
