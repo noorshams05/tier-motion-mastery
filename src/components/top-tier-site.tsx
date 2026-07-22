@@ -434,11 +434,12 @@ function FleetBand() {
             transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
             className="w-full"
           >
-            <img
-<img src="/photos/moving-truck.jpg" alt="Top Tier moving truck" />
-              className="w-full h-auto"
-              loading="lazy"
-            />
+       <img
+  src="/photos/moving-truck.jpg"
+  alt="Top Tier moving truck"
+  className="w-full h-auto"
+  loading="lazy"
+/>
           </motion.div>
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background" />
         </div>
