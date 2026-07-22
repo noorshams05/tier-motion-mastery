@@ -939,6 +939,7 @@ const formSchema = z.object({
   move_from: z.string().trim().max(200).optional().default(""),
   move_to: z.string().trim().max(200).optional().default(""),
   move_size: z.string().trim().max(80).optional().default(""),
+  box_count: z.string().trim().optional().default(""),
   details: z.string().trim().max(2000).optional().default(""),
 });
 
@@ -954,6 +955,7 @@ function ContactForm() {
     move_from: "",
     move_to: "",
     move_size: "",
+    box_count: "",
     details: "",
   });
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
