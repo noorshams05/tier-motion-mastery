@@ -73,7 +73,7 @@ function Nav() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between h-16 md:h-20">
         <a href="#top" className="flex items-center gap-3 group">
           <img
-            src={logoUrl}
+src="/photos/top tier logo.png"
             alt="Top Tier Moving Solutions"
             className="h-10 md:h-12 w-auto transition-transform duration-500 group-hover:scale-105"
           />
@@ -411,7 +411,7 @@ function FleetBand() {
             className="w-full"
           >
             <img
-              src={truckBrandedUrl}
+"/photos/moving truck.jpg"
               alt="Top Tier Moving Solutions branded truck showing services and phone number"
               className="w-full h-auto"
               loading="lazy"
@@ -1242,11 +1242,20 @@ function SelectField({
         <option value=""></option>
         {options.map((o) => (
           <option key={o} value={o} className="bg-background">
-            {o}
+            {o}S
           </option>
         ))}
       </select>
     </label>
+    <label className="relative flex flex-col gap-1 w-full">
+  <span className="text-sm font-medium text-foreground/60">How many boxes?</span>
+  <input 
+    type="text" 
+    name="boxes" 
+    placeholder="e.g., 20 medium, 5 large" 
+    className="w-full h-14 rounded-xl bg-input/60 border border-border/70 px-4 pt-1 text-sm text-foreground outline-none appearance-none focus:border-primary transition-colors"
+  />
+</label>
   );
 }
 
