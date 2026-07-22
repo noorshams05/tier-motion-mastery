@@ -1128,6 +1128,18 @@ function ContactForm() {
                         "Just a few items",
                       ]}
                     />
+                    <SelectField
+          label="How many boxes?"
+          value={values.box_count}
+          onChange={(v) => setField("box_count", v)}
+          options={[
+            "1-25",
+            "26-50",
+            "51-100",
+            "100+",
+            "Not sure yet",
+          ]}
+        />
                     <Field
                       label="Move from"
                       value={values.move_from}
