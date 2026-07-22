@@ -11,11 +11,11 @@ export const Route = createFileRoute("/")({
         content:
           "Premium residential, commercial, and long-distance moving in Worcester, MA. Trained crew, fully insured, 24/7 availability. Call 774-415-6411.",
       },
-      { property: "og:title", content: "Top Tier Moving Solutions — Worcester, MA" },
+      { property: "og:title", content: "Top Tier Moving Solutions — Worcester, MA Movers" },
       {
         property: "og:description",
         content:
-          "Top service. Top care. Top tier. Premium moving crew serving Worcester and Central Massachusetts.",
+          "Premium residential, commercial, and long-distance moving in Worcester, MA. Trained crew, fully insured, 24/7 availability. Call 774-415-6411.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
