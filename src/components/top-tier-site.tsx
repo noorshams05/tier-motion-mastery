@@ -435,8 +435,7 @@ function FleetBand() {
             className="w-full"
           >
             <img
-"/photos/moving truck.jpg"
-              alt="Top Tier Moving Solutions branded truck showing services and phone number"
+<img src="/photos/moving-truck.jpg" alt="Top Tier moving truck" />
               className="w-full h-auto"
               loading="lazy"
             />
