@@ -65,7 +65,7 @@ export const submitLead = createServerFn({ method: "POST" })
           Authorization: `Bearer ${resendKey}`,
         },
         body: JSON.stringify({
-          from: "Top Tier Moving <onboarding@resend.dev>",
+          from: "Top Tier Moving <quotes@toptiermove.com>",
           to: ["justin@toptiermove.com"],
           reply_to: data.email,
           subject: `New quote: ${data.full_name} — ${data.move_date}`,
