@@ -1284,8 +1284,8 @@ function SelectField({
         <option value=""></option>
         {options.map((o) => (
           <option key={o} value={o} className="bg-background">
-            {o}S
-          </option>
+  {o}
+</option>
         ))}
       </select>
     </label>
